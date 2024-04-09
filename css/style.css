@@ -1,0 +1,12 @@
+::selection{
+    color: rgb(255, 193, 7) ;
+    background: #000;
+}
+h1{
+    font-family:cursive;
+}
+.inputs{
+    border-block: 2px dashed rgb(255, 193, 7);
+    
+
+}

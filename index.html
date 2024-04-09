@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link
+      rel="shortcut icon"
+      href="./images/bookmark.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container p-5 ">
+      <h1 class="text-dark text-center fw-bolder mb-5 ">
+        Bookmarker <i class="fa-solid fa-bookmark text-warning"></i>
+      </h1>
+      <div class="inputs py-5">
+      <div class="alert alert-danger mt-2 d-none" id="validationAlert">
+        <p class="fw-bold">Site Name or Url is not valid, Please follow the rules below :</p>
+        <p><i class="fa-solid fa-caret-right"></i> Site name must contain at least 3 characters</p>
+        <p><i class="fa-solid fa-caret-right"></i> Site URL must be a valid one</p>
+      </div>
+
+      <div class="form-group my-3">
+        <label for="linkName" class="fs-5"><i class="fa-solid fa-book-bookmark text-warning"></i> Site Name</label>
+        <input oninput="nameValidation()" type="text" id="linkName"  class="form-control mt-3 border-warning focus-ring focus-ring-warning">
+      </div>
+      <div class="form-group my-3 ">
+        <label for="linkUrl" class="fs-5"><i class="fa-solid fa-link text-warning"></i> Site Link</label>
+        <input oninput="urlValidation()" type="text" id="linkUrl"  class="form-control mt-3 border-warning focus-ring focus-ring-warning">
+      </div>
+      <button class="btn btn-warning text-white px-4 d-block m-auto" onclick="addLink()">submit</button>
+      </div>
+      <table class="table text-center mt-5">
+        <thead>
+          <th>index</th>
+          <th>Site Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="myTable">
+        </tbody>
+      </table>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main .js"></script>
+  </body>
+</html>
